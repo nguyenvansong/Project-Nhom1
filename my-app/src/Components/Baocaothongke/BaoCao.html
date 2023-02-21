@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/baocao.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.2.1/css/all.min.css">
+    <title>Document</title>
+
+    <!-- google chart -->
+</head>
+<body>
+    <div class="div_content">
+        <div class="temp">
+            <h1>menu</h1>
+        </div>
+
+        <div class="Dashboard">
+            <div class="Dashboard_header">
+                <div class="div_avt">   
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+    
+            <div class="Dashboard_content">
+    
+                <div class="title_page">
+                    <div class="title">
+                        <span>THỐNG KÊ DỮ LIỆU</span>
+                    </div>
+
+                    <div class="datetime">
+                        <select class="select_datetime" name="filtermonth" id="filtermonth">
+                            <option value="">Chọn tháng</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+    
+                        <select class="select_datetime" name="filteryear" id="filteryear">
+                            <option value="">Chọn năm</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                        </select>
+    
+                        <div onclick="getfilter()" class="div_filter" id="div_filter">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="Dashboard_content_child">
+
+                    <!-- conten_center -->
+                    <div class="content_center">
+
+                        <div class="revenue_statistics_years">
+                            <div class="revenue_statistics_years_title">
+                                Doanh thu theo năm:
+                            </div>
+                            <div id="chart_div"></div>
+                        </div>
+
+                        <hr>
+
+                        <div class="best_product_selling">
+                            <div class="best_product_selling_title">Danh sách mặt hàng bán chạy nhất:</div>
+
+                            <table class="best_product_selling_table">
+                                <thead class="best_product_selling_table_head">
+                                    <tr>
+                                        <th class="best_product_selling_table_head_th1" colspan="2">Sản phẩm</th>
+                                        <th class="best_product_selling_table_head_th2">Giá</th>
+                                        <th class="best_product_selling_table_head_th3">Số lượng</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="best_product_selling_table_body">
+
+
+                                    <tr class="infor_table">
+                                        <td class="product_img"> 
+                                            <img class="img_title" src="/laptop1.jpg" alt="">
+                                        </td>
+                                        <td class="product_name">
+                                            <div class="name_product">HP Omen 15-dh0172TX Gaming Laptop - Core I5 / Ram 8GB / SSD 128GB</div>
+                                        </td>
+                                        <td class="product_price">
+                                            <span>15.600.000<span>đ</span></span>
+                                        </td>
+                                        <td class="product_quantity">
+                                            <span>36</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="infor_table">
+                                        <td class="product_img"> 
+                                            <img class="img_title" src="/laptop1.jpg" alt="">
+                                        </td>
+                                        <td class="product_name">
+                                            <div class="name_product"> Omen 15-dh0172TX Gaming Laptop - Core I5 / Ram 8GB / SSD 128GB</div>
+                                        </td>
+                                        <td class="product_price">
+                                            <span>15.600.000<span>đ</span></span>
+                                        </td>
+                                        <td class="product_quantity">
+                                            <span>36</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="infor_table">
+                                        <td class="product_img"> 
+                                            <img class="img_title" src="/laptop1.jpg" alt="">
+                                        </td>
+                                        <td class="product_name">
+                                            <div class="name_product"> Omen 15-dh0172TX Gaming Laptop - Core I5 / Ram 8GB / SSD 128GB</div>
+                                        </td>
+                                        <td class="product_price">
+                                            <span>15.600.000<span>đ</span></span>
+                                        </td>
+                                        <td class="product_quantity">
+                                            <span>36</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="infor_table">
+                                        <td class="product_img"> 
+                                            <img class="img_title" src="/laptop1.jpg" alt="">
+                                        </td>
+                                        <td class="product_name">
+                                            <div class="name_product"> Omen 15-dh0172TX Gaming Laptop - Core I5 / Ram 8GB / SSD 128GB</div>
+                                        </td>
+                                        <td class="product_price">
+                                            <span>15.600.000<span>đ</span></span>
+                                        </td>
+                                        <td class="product_quantity">
+                                            <span>36</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="infor_table">
+                                        <td class="product_img"> 
+                                            <img class="img_title" src="/laptop1.jpg" alt="">
+                                        </td>
+                                        <td class="product_name">
+                                            <div class="name_product"> Omen 15-dh0172TX Gaming Laptop - Core I5 / Ram 8GB / SSD 128GB</div>
+                                        </td>
+                                        <td class="product_price">
+                                            <span>15.600.000<span>đ</span></span>
+                                        </td>
+                                        <td class="product_quantity">
+                                            <span>36</span>
+                                        </td>
+                                    </tr>
+                                    
+                                    
+                                </tbody>
+                                <hr>
+                            </table>
+                        </div>
+
+                        <div class="inventory">
+                            <div class="inventory_title">
+                                <span>Hàng tồn kho:</span>
+                            </div>
+
+                            <table class="best_product_selling_table">
+                                <thead class="best_product_selling_table_head">
+                                    <tr>
+                                        <th class="best_product_selling_table_head_th1" colspan="2">Sản phẩm</th>
+                                        <th class="best_product_selling_table_head_th2">Giá</th>
+                                        <th class="best_product_selling_table_head_th3">Số lượng</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="best_product_Inventory_table_body">
+                                    <tr class="infor_table">
+                                        <td class="product_img"> 
+                                            <img class="img_title" src="/laptop1.jpg" alt="">
+                                        </td>
+                                        <td class="product_name">
+                                            <div class="name_product"> Omen 15-dh0172TX Gaming Laptop - Core I5 / Ram 8GB / SSD 128GB</div>
+                                        </td>
+                                        <td class="product_price">
+                                            <span>15.600.000<span>đ</span></span>
+                                        </td>
+                                        <td class="product_quantity">
+                                            <span>36</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="infor_table">
+                                        <td class="product_img"> 
+                                            <img class="img_title" src="/laptop1.jpg" alt="">
+                                        </td>
+                                        <td class="product_name">
+                                            <div class="name_product">HP Omen 15-dh0172TX Gaming Laptop - Core I5 / Ram 8GB / SSD 128GB</div>
+                                        </td>
+                                        <td class="product_price">
+                                            <span>15.600.000<span>đ</span></span>
+                                        </td>
+                                        <td class="product_quantity">
+                                            <span>36</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="infor_table">
+                                        <td class="product_img"> 
+                                            <img class="img_title" src="/laptop1.jpg" alt="">
+                                        </td>
+                                        <td class="product_name">
+                                            <div class="name_product">HP Omen 15-dh0172TX Gaming Laptop - Core I5 / Ram 8GB / SSD 128GB</div>
+                                        </td>
+                                        <td class="product_price">
+                                            <span>15.600.000<span>đ</span></span>
+                                        </td>
+                                        <td class="product_quantity">
+                                            <span>36</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="infor_table">
+                                        <td class="product_img"> 
+                                            <img class="img_title" src="/laptop1.jpg" alt="">
+                                        </td>
+                                        <td class="product_name">
+                                            <div class="name_product">HP Omen 15-dh0172TX Gaming Laptop - Core I5 / Ram 8GB / SSD 128GB</div>
+                                        </td>
+                                        <td class="product_price">
+                                            <span>15.600.000<span>đ</span></span>
+                                        </td>
+                                        <td class="product_quantity">
+                                            <span>36</span>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                                <hr>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <!-- content_right -->
+                    <div class="content_right">
+                        <div class="Revenue_content">
+                            <div class="text_Revenue_total">
+                                <span>Ước tính doanh thu tháng:</span>
+                            </div>
+                            <div class="Revenue_total">
+                                <span class="Revenue_total_span"></span>
+                                <span class="Revenue_total_span_1">đ</span>
+                                <span class="Revenue_total_span_2">100</span>
+                            </div>
+    
+                            <div class="Revenue_detail">
+                                <div class="Revenue_detail_laptop">
+                                    <span class="Revenue_detail_span_1"><i class="fa-solid fa-laptop Revenue_detail_i"></i>Laptop:</span> 
+                                    <span  class="Revenue_detail_span_2">0%</span>
+                                </div>
+                                
+                                <div class="Revenue_detail_component ">
+                                    <span class="Revenue_detail_span_1"><i class="fa-solid fa-microchip Revenue_detail_i"></i>Phụ kiện:</span>
+                                    <span class="Revenue_detail_span_3">0%</span>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="Revenue_brand">
+                            <div class="Revenue_brand_title">Doanh thu theo hãng sản xuất:</div>
+                            <div id="piechart"></div>
+                        </div>
+
+
+                        <div class="Potential_customers">
+                            <div class="Potential_customers_title">
+                                <span>Khách hàng tiềm năng: </span>
+                            </div>
+
+                            <div class="Potential_customers_content">
+                                <div class="Potential_customers_content_head">
+                                    <div class="Potential_customers_head_ID">Mã khách hàng</div>
+                                    <div class="Potential_customers_head_name">Tên khách hàng</div>
+                                </div>
+
+                                <div class="Potential_customers_content_body">
+                                    <div class="Potential_customers_body_ID">012</div>
+                                    <div class="Potential_customers_body_name">Nguyễn Văn A</div>
+                                </div>
+
+                                <div class="Potential_customers_content_body">
+                                    <div class="Potential_customers_body_ID">012</div>
+                                    <div class="Potential_customers_body_name">Nguyễn Văn A</div>
+                                </div>
+                                <div class="Potential_customers_content_body">
+                                    <div class="Potential_customers_body_ID">012</div>
+                                    <div class="Potential_customers_body_name">Nguyễn Văn A</div>
+                                </div>
+                                <div class="Potential_customers_content_body">
+                                    <div class="Potential_customers_body_ID">012</div>
+                                    <div class="Potential_customers_body_name">Nguyễn Văn A</div>
+                                </div>
+                                <div class="Potential_customers_content_body">
+                                    <div class="Potential_customers_body_ID">012</div>
+                                    <div class="Potential_customers_body_name">Nguyễn Văn A</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+</body>
+
+    <!-- <script></script> -->
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="chart.js" type="text/javascript"></script>
+    <script src="eventBaoCao.js" type="text/javascript"></script>
+    <script src="Fetch.js" type="text/javascript"></script>
+</html>
